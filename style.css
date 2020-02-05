@@ -7,7 +7,6 @@ body{
     border-radius: 20px;
     padding: 20px;
     background-color: #353535;
-    border: none;
 }
 
 #all{
@@ -59,8 +58,10 @@ body{
 input{
     color: white;
     font-size: 20px;
+    border-width: 0px;
 }
 textarea{
     color: white;
     font-size: 20px;
+    border-width: 0px;
 }
