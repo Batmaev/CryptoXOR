@@ -1,0 +1,56 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.rect{
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #353535;
+}
+
+#all{
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+    margin: auto;
+}
+
+#key-etc{
+    display: flex;
+    margin: 15px;
+    padding: 0px;
+    background-color: #202020;
+    align-items: center;
+    max-width: fit-content;
+    justify-content: space-evenly;
+}
+#key{
+    width: 100px;
+    align-self: stretch;
+    flex-shrink: 0.1;
+}
+
+#gen-and-copy{
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+#gen{
+    margin: 15px;
+}
+#copy-key{
+    margin: 15px;
+}
+
+#before-and-after{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.big{
+    margin: 15px;
+    width: 400px;
+    height: 500px;
+}
