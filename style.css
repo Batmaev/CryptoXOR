@@ -7,6 +7,7 @@ body{
     border-radius: 20px;
     padding: 20px;
     background-color: #353535;
+    border: none;
 }
 
 #all{
@@ -36,6 +37,7 @@ body{
     flex-wrap: wrap;
     flex-grow: 0;
     flex-shrink: 1;
+    font-size: smaller;
 }
 #gen{
     margin: 15px;
@@ -53,4 +55,12 @@ body{
     margin: 15px;
     width: 400px;
     height: 500px;
+}
+input{
+    color: white;
+    font-size: 20px;
+}
+textarea{
+    color: white;
+    font-size: 20px;
 }
