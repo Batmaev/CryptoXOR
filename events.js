@@ -26,6 +26,9 @@ function _onSubmit(event){
             let result = trans(messageObj.value)
             const outputObj = document.getElementById("after")
             outputObj.innerText = result
+            if(beforePosition.top < afterPosition.top){
+                after.scrollIntoView(true)
+            }
         }
     } 
 }
