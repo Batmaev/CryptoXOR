@@ -12,8 +12,6 @@ function rand() {
   if(next >= MAX_UINT){
       next %= MAX_UINT
   }
-  alert(`next ${next}
-  return ${Math.floor((next/65536)) % (RAND_MAX + 1)}`)
   return Math.floor((next/65536)) % (RAND_MAX + 1);
 }
 
