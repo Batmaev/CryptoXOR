@@ -38,10 +38,7 @@ body{
     flex-shrink: 1;
     font-size: smaller;
 }
-#gen{
-    margin: 15px;
-}
-#copy-key{
+.buttons {
     margin: 15px;
 }
 
@@ -57,10 +54,22 @@ body{
     height: 75vh;
     word-break: break-all;
 }
+#after{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+#output{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
 input{
     color: white;
     font-size: 20px;
     border-width: 0px;
+}
+.right{
+    align-self: flex-end;
 }
 textarea{
     color: white;

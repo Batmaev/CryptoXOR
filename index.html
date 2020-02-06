@@ -11,13 +11,16 @@
             <div id="key-etc" class="rect">
                 <input type="text" id="key" name="key" placeholder="Enter key" class="rect"></input>
                 <div id="gen-and-copy">
-                    <div id="gen">Случайный</div>
-                    <div id="copy-key" onclick="copy(`key`)">Копировать</div>
+                    <div class="buttons">Случайный</div>
+                    <div class="copy buttons" onclick="copy(`key`)">Копировать</div>
                 </div>
             </div>
             <div id="before-and-after">
                 <textarea name="message" placeholder="Введите текст" id="before" class="big rect"></textarea>
-                <div id="after" class="big rect">After</div>
+                <div id="after" class="big rect">
+                    <textarea readonly class="almost rect" id="output" placeholder="Здесь появится зашифрованный (или расшифрованный) текст"></textarea>
+                    <div class="right copy buttons" onclick="copy(`output`)">Копировать</div>
+                </div>
             </div>
         </form>
         <script src="align.js"></script>
