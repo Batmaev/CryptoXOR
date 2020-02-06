@@ -13,19 +13,11 @@ function rand() {
 
 function trans(str){
     let array = str.split("")
-    //alert(array)
-    // array.map(item => item + item)
-    // return array.join(" ")
     array = array.map(item => item.charCodeAt(0))
-    //alert(array)
     array = array.map(item => unicodeToMyCode(item))
-    //alert(array)
-    array = array.map(item => item ^ (rand() % 128))
-    //alert(array)
+    array = array.map(item => item ^ (rand() % 32))
     array = array.map(item => myCodeToUnicode(item))
-    //alert(array)
     array = array.map(item => String.fromCharCode(item))
-    //alert(array)
     return array.join("")
 }
 
@@ -54,6 +46,6 @@ function myCodeToUnicode(n){
         return n + 944
     }
     else{
-        return false
+        return n + 944
     }
 }
