@@ -22,7 +22,7 @@ body{
     padding: 0px;
     background-color: #202020;
     align-items: center;
-    max-width: fit-content;
+    max-width: max-content;
     justify-content: space-evenly;
 }
 #key{
