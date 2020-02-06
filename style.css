@@ -55,6 +55,7 @@ body{
     width: 400px;
     min-height: 175px;
     height: 75vh;
+    word-break: break-all;
 }
 input{
     color: white;
