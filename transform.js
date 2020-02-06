@@ -3,11 +3,17 @@ const messageObj = all.message
 const keyObj = all.key
 
 const RAND_MAX = 32767 
+const MAX_UINT = 4294967296
 
 let next = 1;
 
 function rand() {
   next = next * 1103515245 + 12345;
+  if(next >= MAX_UINT){
+      next %= MAX_UINT
+  }
+  alert(`next ${next}
+  return ${Math.floor((next/65536)) % (RAND_MAX + 1)}`)
   return Math.floor((next/65536)) % (RAND_MAX + 1);
 }
 
