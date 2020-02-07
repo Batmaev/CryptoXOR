@@ -53,13 +53,11 @@ body{
     min-height: 175px;
     height: 75vh;
     word-break: break-all;
-}
-#after{
+    padding: 0px;
     display: flex;
     flex-direction: column;
-    padding: 0px;
 }
-#output{
+.almost{
     flex-grow: 1;
     flex-shrink: 1;
 }

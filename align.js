@@ -5,7 +5,7 @@ const beforePosition = before.getBoundingClientRect()
 const afterPosition = after.getBoundingClientRect()
 
 if(beforePosition.top < afterPosition.top){
-    if(beforePosition.width == 440){ //магическая константа = width + padding + padding
+    if(beforePosition.width == 400){ //магическая константа = width + padding + padding
         const container = document.getElementById("before-and-after")
         container.style.flexDirection = "column"
     }
