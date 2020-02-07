@@ -29,6 +29,10 @@ function unicodeToMyCode(n){
         return n - 32
     } else if(n >= 1040 && n <= 1103){
         return n - 944
+    } else if(n === 1025){
+        return 160
+    } else if(n === 1105){
+        return 161
     } else {
         alert(`Жаль, но символ ${String.fromCharCode(n)} не поддерживается`)
         return false
@@ -44,6 +48,12 @@ function myCodeToUnicode(n){
     }
     else if(n <= 159){
         return n + 944
+    }
+    else if(n === 160){
+        return 1025
+    }
+    else if(n === 161){
+        return 1105
     }
     else{
         return n + 944
