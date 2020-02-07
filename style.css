@@ -23,7 +23,7 @@ body{
     background-color: #202020;
     align-items: center;
     max-width: max-content;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 #key{
     width: 100px;
