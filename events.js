@@ -16,7 +16,13 @@ function _onKeyPress(event) {
 function _onSubmit(event){
     event.preventDefault()
 
-    if(keyObj.value !== "" && messageObj.value){
+    if(keyObj.value !== "" && messageObj.value === ""){
+        messageObj.focus()
+    }
+    else if(keyObj.value === "" && messageObj.value !== ""){
+        keyObj.focus()
+    }
+    else if(keyObj.value !== "" && messageObj.value){
         let key = Number(keyObj.value)
         if(isNaN(key)) {
             alert(`В поле для ключа должно быть число, вы ввели "${keyObj.value}"`)
