@@ -22,6 +22,9 @@ function _onSubmit(event){
             alert(`В поле для ключа должно быть число, вы ввели "${keyObj.value}"`)
         }
         else{
+            if(key < 0){
+                key -= Math.floor(key/MAX_UINT) * MAX_UINT
+            }
             next = key
             let result = trans(messageObj.value)
             const outputObj = document.getElementById("output")
