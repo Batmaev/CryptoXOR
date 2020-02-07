@@ -13,12 +13,21 @@ function rand() {
 
 function trans(str){
     let array = str.split("")
+    array = array.map(item => replace(item))
     array = array.map(item => item.charCodeAt(0))
     array = array.map(item => unicodeToMyCode(item))
     array = array.map(item => item ^ (rand() % 32))
     array = array.map(item => myCodeToUnicode(item))
     array = array.map(item => String.fromCharCode(item))
     return array.join("")
+}
+
+function replace(c){
+    if(c === "Ё") return "Е";
+    if(c === "ё") return "е";
+    if(c === "—") return "-";
+    if(c === "–") return "-";
+    return c
 }
 
 function unicodeToMyCode(n){
@@ -29,10 +38,6 @@ function unicodeToMyCode(n){
         return n - 32
     } else if(n >= 1040 && n <= 1103){
         return n - 944
-    } else if(n === 1025){
-        return 160
-    } else if(n === 1105){
-        return 161
     } else {
         alert(`Жаль, но символ ${String.fromCharCode(n)} не поддерживается`)
         return false
@@ -48,12 +53,6 @@ function myCodeToUnicode(n){
     }
     else if(n <= 159){
         return n + 944
-    }
-    else if(n === 160){
-        return 1025
-    }
-    else if(n === 161){
-        return 1105
     }
     else{
         return n + 944
