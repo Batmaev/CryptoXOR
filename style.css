@@ -26,7 +26,7 @@ body{
     justify-content: space-evenly;
 }
 #key{
-    width: 111px;
+    width: 100px;
     align-self: stretch;
     flex-shrink: 0.1;
 }
@@ -40,6 +40,8 @@ body{
 }
 .buttons {
     margin: 15px;
+    font-family: "San Francisco", Helvetica, sans-serif;
+    font-size: 18px;
 }
 .gen{
     color: #34C759;
@@ -69,14 +71,16 @@ body{
 }
 input{
     color: white;
-    font-size: 20px;
     border-width: 0px;
+    font-family: "San Francisco", Helvetica, sans-serif;
+    font-size: 18px;
 }
 .right{
     align-self: flex-end;
 }
 textarea{
     color: white;
-    font-size: 20px;
     border-width: 0px;
+    font-family: "San Francisco", Helvetica, sans-serif;
+    font-size: 18px;
 }
