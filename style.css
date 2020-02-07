@@ -41,6 +41,12 @@ body{
 .buttons {
     margin: 15px;
 }
+.gen{
+    color: #34C759;
+}
+.copy{
+    color: #0a84FF;
+}
 
 #before-and-after{
     display: flex;
