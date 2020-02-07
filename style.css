@@ -43,6 +43,9 @@ body{
     font-family: "San Francisco", Helvetica, sans-serif;
     font-size: 18px;
 }
+.buttons:active{
+    opacity: 0.5;
+}
 .gen{
     color: #34C759;
 }

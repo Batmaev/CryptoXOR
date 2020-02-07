@@ -11,4 +11,7 @@ if(beforePosition.top < afterPosition.top){
     }
     before.style.maxHeight = "35vh"
     after.style.maxHeight = "35vh"
+
+    const keyetc = document.getElementById("key-etc")
+    keyetc.style.maxWidth = "400px"
 }
