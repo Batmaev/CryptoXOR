@@ -9,7 +9,7 @@ keyObj.addEventListener("keypress", _onKeyPress.bind(this))
 function _onKeyPress(event) {
     if(event.keyCode === 13){
         event.preventDefault()
-        form.dispatchEvent(new Event("submit"))
+        form.dispatchEvent(new Event("submit", {cancelable: true}))
     }
 }
 
