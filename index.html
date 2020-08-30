@@ -15,17 +15,16 @@
                     <div class="copy buttons" onclick="copy(`key`)">Копировать</div>
                 </div>
             </div>
-            <div id="before-and-after">
-                <div class="big rect" id="before">
-                    <textarea name="message" placeholder="Введите текст" class="almost rect"></textarea>
-                </div>
-                <div id="after" class="big rect">
-                    <textarea readonly class="almost rect" id="output" placeholder="Здесь появится зашифрованный (или расшифрованный) текст"></textarea>
-                    <div class="right copy buttons" onclick="copy(`output`)">Копировать</div>
-                </div>
+            <div class="half"></div>
+            <div class="big rect" id="before">
+                <textarea name="message" placeholder="Введите текст" class="almost rect"></textarea>
+            </div>
+            <div id="after" class="big rect">
+                <textarea readonly class="almost rect" id="output" placeholder="Здесь появится зашифрованный (или расшифрованный) текст"></textarea>
+                <div class="right copy buttons" onclick="copy(`output`)">Копировать</div>
             </div>
         </form>
-        <!-- <script src="align.js"></script> -->
+        <script src="align.js"></script>
         <script src="randoms.js"></script>
         <script src="transform.js"></script>
         <script src="events.js"></script>

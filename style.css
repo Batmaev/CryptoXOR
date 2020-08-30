@@ -9,11 +9,19 @@ body{
     background-color: #353535;
 }
 
+.half{
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 0;
+    width: 400px;
+}
+
 #all{
     display: flex;
-    flex-direction: column;
-    max-width: max-content;
+    max-width: 890px;
     margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 #key-etc{
@@ -21,15 +29,14 @@ body{
     margin: 15px;
     padding: 0px;
     background-color: #202020;
-    align-items: center;
-    max-width: 400px;
-    /* justify-content: space-evenly; */
+    width: 400px;
+    justify-self: flex-start;
 }
+
 #key{
     width: 100px;
     align-self: stretch;
     flex-shrink: 0.1;
-    justify-self: start;
 }
 
 #gen-and-copy{
@@ -65,23 +72,11 @@ body{
     padding: 0px;
     display: flex;
     flex-direction: column;
-}
-#before-and-after{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-grow: 1;
 }
 /* @media (max-width: 890px) {
-    #before-and-after{
-        flex-direction: column;
-    }
     .big{
-        max-height: 40vh;
-    }
-}
-@media (max-width: 430px){
-    #before-and-after{
-        flex-direction: row;
+        height: 40vh;
     }
 } */
 .almost{
