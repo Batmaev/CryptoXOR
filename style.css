@@ -22,21 +22,24 @@ body{
     padding: 0px;
     background-color: #202020;
     align-items: center;
-    max-width: max-content;
-    justify-content: space-between;
+    max-width: 400px;
+    /* justify-content: space-evenly; */
 }
 #key{
     width: 100px;
     align-self: stretch;
     flex-shrink: 0.1;
+    justify-self: start;
 }
 
 #gen-and-copy{
     display: inline-flex;
     flex-wrap: wrap;
-    flex-grow: 0;
+    flex-grow: 1;
     flex-shrink: 1;
     font-size: smaller;
+    justify-content: space-evenly;
+    
 }
 .buttons {
     margin: 15px;
@@ -53,11 +56,6 @@ body{
     color: #0a84FF;
 }
 
-#before-and-after{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .big{
     margin: 15px;
     width: 400px;
@@ -68,6 +66,24 @@ body{
     display: flex;
     flex-direction: column;
 }
+#before-and-after{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* @media (max-width: 890px) {
+    #before-and-after{
+        flex-direction: column;
+    }
+    .big{
+        max-height: 40vh;
+    }
+}
+@media (max-width: 430px){
+    #before-and-after{
+        flex-direction: row;
+    }
+} */
 .almost{
     flex-grow: 1;
     flex-shrink: 1;

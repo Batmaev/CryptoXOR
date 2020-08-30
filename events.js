@@ -2,40 +2,44 @@ const form = document.forms.all
 const messageObj = all.message
 const keyObj = all.key
 
-form.addEventListener("submit", _onSubmit.bind(this))
-messageObj.addEventListener("keypress", _onKeyPress.bind(this))
-keyObj.addEventListener("keypress", _onKeyPress.bind(this))
+form.addEventListener("submit", main)
+messageObj.addEventListener("keypress", isEnter)
+keyObj.addEventListener("keydown", isEnter.bind(this))
 
-function _onKeyPress(event) {
-    if(event.keyCode === 13){
+function isEnter(event) {
+    if(event.key === "Enter"){
         event.preventDefault()
         form.dispatchEvent(new Event("submit", {cancelable: true}))
     }
 }
 
-function _onSubmit(event){
+function main(event){
     event.preventDefault()
 
-    if(keyObj.value !== "" && messageObj.value === ""){
-        messageObj.focus()
-    }
-    else if(keyObj.value === "" && messageObj.value !== ""){
+    if(keyObj.value === ""){
         keyObj.focus()
     }
-    else if(keyObj.value !== "" && messageObj.value){
+    else if(messageObj.value === ""){
+        messageObj.focus()
+    }
+    else {
         let key = Number(keyObj.value)
         if(isNaN(key)) {
-            alert(`В поле для ключа должно быть число, вы ввели "${keyObj.value}"`)
+            alert(`В поле для ключа должно быть число, а вы ввели "${keyObj.value}"`)
         }
         else{
             if(key < 0){
                 key -= Math.floor(key/MAX_UINT) * MAX_UINT
             }
+            //На целое key проверять не нужно, потому что в linearCongruent (randoms.js) есть Math.floor, и в конечном счёте всё округляется
+
             let result = trans(messageObj.value, key)
             const outputObj = document.getElementById("output")
             outputObj.value = result
-            if(beforePosition.top < afterPosition.top){
-                after.scrollIntoView(true)
+
+            //На мобильных устройствах прямоугольники "до" и "после" расположены вертикально, поэтому имеет смысл прокрутить
+            if(before.getBoundingClientRect().top < after.getBoundingClientRect().top){
+                after.scrollIntoView()
             }
         }
     } 
