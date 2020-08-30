@@ -11,17 +11,18 @@
             <div id="key-etc" class="stdWidth">
                 <input type="text" id="key" name="key" placeholder="Enter key" class="rect"></input>
                 <div id="gen-and-copy" class="fillAllFreeSpace">
-                    <div class="gen buttons" onclick="randomKey()">Случайный</div>
-                    <div class="copy buttons" onclick="copy(`key`)">Копировать</div>
+                    <div class="green buttons" onclick="randomKey()">Случайный</div>
+                    <div class="blue buttons" onclick="copy(`key`)">Копировать</div>
                 </div>
             </div>
             <div id="zero-height" class="stdWidth"></div>
             <div class="big rect stdWidth" id="before">
                 <textarea name="message" placeholder="Введите текст" class="fillAllFreeSpace rect"></textarea>
+                <div class="right blue buttons" onclick="main()">Пуск</div>
             </div>
             <div id="after" class="big rect stdWidth">
                 <textarea readonly class="fillAllFreeSpace rect" id="output" placeholder="Здесь появится зашифрованный (или расшифрованный) текст"></textarea>
-                <div class="right copy buttons" onclick="copy(`output`)">Копировать</div>
+                <div class="right blue buttons" onclick="copy(`output`)">Копировать</div>
             </div>
         </form>
         <script src="align.js"></script>

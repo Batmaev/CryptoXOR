@@ -2,19 +2,17 @@ const form = document.forms.all
 const messageObj = all.message
 const keyObj = all.key
 
-form.addEventListener("submit", main)
 messageObj.addEventListener("keypress", isEnter)
 keyObj.addEventListener("keydown", isEnter.bind(this))
 
 function isEnter(event) {
     if(event.key === "Enter"){
         event.preventDefault()
-        form.dispatchEvent(new Event("submit", {cancelable: true}))
+        main()
     }
 }
 
-function main(event){
-    event.preventDefault()
+function main(){
 
     if(keyObj.value === ""){
         keyObj.focus()

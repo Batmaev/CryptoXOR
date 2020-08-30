@@ -59,10 +59,10 @@ body{
 .buttons:active{
     opacity: 0.5;
 }
-.gen{
+.green{
     color: #34C759;
 }
-.copy{
+.blue{
     color: #0a84FF;
 }
 .right{
