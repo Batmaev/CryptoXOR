@@ -1,19 +1,8 @@
 body{
     background-color: black;
     color: white;
-}
-
-.rect{
-    border-radius: 20px;
-    padding: 15px;
-    background-color: #353535;
-}
-
-.half{
-    margin-left: 15px;
-    margin-right: 15px;
-    height: 0;
-    width: 400px;
+    font-size: 18px;
+    font-family: "San Francisco", Helvetica, sans-serif;
 }
 
 #all{
@@ -27,10 +16,17 @@ body{
 #key-etc{
     display: flex;
     margin: 15px;
+    border-radius: 20px;
     padding: 0px;
     background-color: #202020;
     width: 400px;
     justify-self: flex-start;
+}
+#zero-height{
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 0;
+    width: 400px;
 }
 
 #key{
@@ -42,16 +38,15 @@ body{
 #gen-and-copy{
     display: inline-flex;
     flex-wrap: wrap;
+    justify-content: space-evenly; 
+}
+.fillAllFreeSpace{
     flex-grow: 1;
     flex-shrink: 1;
-    font-size: smaller;
-    justify-content: space-evenly;
-    
 }
+
 .buttons {
     margin: 15px;
-    font-family: "San Francisco", Helvetica, sans-serif;
-    font-size: 18px;
 }
 .buttons:active{
     opacity: 0.5;
@@ -62,7 +57,15 @@ body{
 .copy{
     color: #0a84FF;
 }
+.right{
+    align-self: flex-end;
+}
 
+.rect{
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #353535;
+}
 .big{
     margin: 15px;
     width: 400px;
@@ -74,27 +77,14 @@ body{
     flex-direction: column;
     flex-grow: 1;
 }
-/* @media (max-width: 890px) {
-    .big{
-        height: 40vh;
-    }
-} */
-.almost{
-    flex-grow: 1;
-    flex-shrink: 1;
-}
+
 input{
     color: white;
     border-width: 0px;
-    font-family: "San Francisco", Helvetica, sans-serif;
-    font-size: 18px;
-}
-.right{
-    align-self: flex-end;
+    font: inherit;
 }
 textarea{
     color: white;
     border-width: 0px;
-    font-family: "San Francisco", Helvetica, sans-serif;
-    font-size: 18px;
+    font: inherit;
 }
