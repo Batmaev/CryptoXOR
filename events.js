@@ -31,8 +31,7 @@ function _onSubmit(event){
             if(key < 0){
                 key -= Math.floor(key/MAX_UINT) * MAX_UINT
             }
-            next = key
-            let result = trans(messageObj.value)
+            let result = trans(messageObj.value, key)
             const outputObj = document.getElementById("output")
             outputObj.value = result
             if(beforePosition.top < afterPosition.top){

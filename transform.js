@@ -1,27 +1,26 @@
-const RAND_MAX = 32767 
-const MAX_UINT = 4294967296
+/**
+ * Расшифровывает зашифрованное, шифрует незашифрованное
+ * @param {string} str что шифруем 
+ * @param {number} seed ключ
+ */
+function trans(str, seed){
+    const fib = new Fibonacci(seed)
 
-let next = 1;
-
-function rand() {
-  next = next * 1103515245 + 12345;
-  if(next >= MAX_UINT){
-      next %= MAX_UINT
-  }
-  return Math.floor((next/65536)) % (RAND_MAX + 1);
+    return str .
+    split("") .
+    map(item => replace(item)) . 
+    map(item => item.charCodeAt(0)) .
+    map(item => unicodeToMyCode(item)) .
+    map(item => item ^ (fib.getRandomValue() % 32)) .
+    map(item => myCodeToUnicode(item)) .
+    map(item => String.fromCharCode(item)) .
+    join("");
 }
 
-function trans(str){
-    let array = str.split("")
-    array = array.map(item => replace(item))
-    array = array.map(item => item.charCodeAt(0))
-    array = array.map(item => unicodeToMyCode(item))
-    array = array.map(item => item ^ (rand() % 32))
-    array = array.map(item => myCodeToUnicode(item))
-    array = array.map(item => String.fromCharCode(item))
-    return array.join("")
-}
-
+/**Заменяет Ё на Е,
+ * чтобы было проще перейти от кодов Unicode к маленьким числам MyCode, 
+ * с которыми удобно делать xor
+ */
 function replace(c){
     if(c === "Ё") return "Е";
     if(c === "ё") return "е";
