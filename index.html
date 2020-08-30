@@ -8,18 +8,18 @@
     </head>
     <body>
         <form id="all">
-            <div id="key-etc">
+            <div id="key-etc" class="stdWidth">
                 <input type="text" id="key" name="key" placeholder="Enter key" class="rect"></input>
                 <div id="gen-and-copy" class="fillAllFreeSpace">
                     <div class="gen buttons" onclick="randomKey()">Случайный</div>
                     <div class="copy buttons" onclick="copy(`key`)">Копировать</div>
                 </div>
             </div>
-            <div id="zero-height"></div>
-            <div class="big rect" id="before">
+            <div id="zero-height" class="stdWidth"></div>
+            <div class="big rect stdWidth" id="before">
                 <textarea name="message" placeholder="Введите текст" class="fillAllFreeSpace rect"></textarea>
             </div>
-            <div id="after" class="big rect">
+            <div id="after" class="big rect stdWidth">
                 <textarea readonly class="fillAllFreeSpace rect" id="output" placeholder="Здесь появится зашифрованный (или расшифрованный) текст"></textarea>
                 <div class="right copy buttons" onclick="copy(`output`)">Копировать</div>
             </div>

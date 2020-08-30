@@ -13,19 +13,28 @@ body{
     justify-content: space-evenly;
 }
 
+.stdWidth{
+    width: 400px;
+    margin: 5px;
+    flex-grow: 1;
+}
+@media (min-width: 440px){
+    .stdWidth{
+        margin: 15px;
+    }
+}
+
 #key-etc{
     display: flex;
-    margin: 15px;
     border-radius: 20px;
     padding: 0px;
     background-color: #202020;
-    width: 400px;
+    max-width: 420px;
 }
 #zero-height{
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     height: 0;
-    width: 400px;
 }
 
 #key{
@@ -66,15 +75,12 @@ body{
     background-color: #353535;
 }
 .big{
-    margin: 15px;
-    width: 400px;
     min-height: 175px;
     height: 75vh;
     word-break: break-all;
     padding: 0px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
 }
 
 input{
