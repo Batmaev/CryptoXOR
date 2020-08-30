@@ -20,7 +20,6 @@ body{
     padding: 0px;
     background-color: #202020;
     width: 400px;
-    justify-self: flex-start;
 }
 #zero-height{
     margin-left: 15px;
