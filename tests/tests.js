@@ -1,4 +1,4 @@
-const allSymbolsString = ` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_\`abcdefghijklmnopqrstuvwxyz{|}~АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюя`
+const allSymbolsString = ` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_\`abcdefghijklmnopqrstuvwxyz{|}~АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё`
 const allSymbolsSet = new Set(allSymbolsString)
 
 describe("trans", function() {
@@ -49,7 +49,7 @@ describe("trans", function() {
 
         })
 
-        // Тильда имеет код 127, который близок к коду символа DEL -- 128
+        // Тильда имеет код 126, который близок к коду символа DEL -- 127
         it("~", function(){
             const key = 0
             const message = '~'.repeat(256)
@@ -154,7 +154,7 @@ describe("trans", function() {
 
         })
 
-        // Тильда имеет код 127, который близок к коду символа DEL -- 128
+        // Тильда имеет код 126, который близок к коду символа DEL -- 127
         it("~", function(){
             const key = 0
             const message = '~'.repeat(256)
