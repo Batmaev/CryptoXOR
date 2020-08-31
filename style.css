@@ -28,7 +28,7 @@ body{
     display: flex;
     border-radius: 20px;
     padding: 0px;
-    background-color: #202020;
+    background-color: #121617;
     max-width: 420px;
 }
 #zero-height{
@@ -72,7 +72,7 @@ body{
 .rect{
     border-radius: 20px;
     padding: 15px;
-    background-color: #353535;
+    background-color: #202020;
 }
 .big{
     min-height: 200px;
