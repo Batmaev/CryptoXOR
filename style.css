@@ -18,7 +18,7 @@ body{
     margin: 5px;
     flex-grow: 1;
 }
-@media (min-width: 440px){
+@media (min-width: 440px) and (min-height: 500px){
     .stdWidth{
         margin: 15px;
     }
@@ -75,7 +75,7 @@ body{
     background-color: #353535;
 }
 .big{
-    min-height: 175px;
+    min-height: 200px;
     height: 75vh;
     word-break: break-all;
     padding: 0px;
