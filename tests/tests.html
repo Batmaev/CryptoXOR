@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--Спасибо за код https://learn.javascript.ru/testing-mocha -->
+<html>
+<head>
+
+  <title>Тесты для CryptoXOR</title>
+  <meta charset="utf8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd');
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    let assert = chai.assert;
+  </script>
+
+</head>
+
+<body>
+
+  <script src="../randoms.js"></script>
+  <script src="../transform.js"></script>
+  
+  <script src="tests.js"></script>
+
+  <div id="mocha"></div>
+
+  <script>
+    mocha.run();
+  </script>
+
+</body>
+
+</html>
